@@ -27,5 +27,4 @@ public class ShoppingCartController {
     public List get() {
         return (shoppingCartService.getShoppingCart());
     }
-
 }

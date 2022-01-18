@@ -14,7 +14,6 @@ public class ShoppingCart {
     public List<Integer> getProductsId() {
         return productsId;
     }
-
     public void setProductsId(List<Integer> productsId) {
         this.productsId = productsId;
     }

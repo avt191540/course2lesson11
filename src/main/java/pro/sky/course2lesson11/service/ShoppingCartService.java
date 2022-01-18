@@ -18,7 +18,6 @@ public class ShoppingCartService {
         shoppingCart.getProductsId().add(id);
         return id;
     }
-
     public List getShoppingCart() {
         return shoppingCart.getProductsId();
     }
