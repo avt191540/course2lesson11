@@ -13,4 +13,5 @@ public class ShoppingCartConfiguration {
     public ShoppingCart shoppingCart() {
         return new ShoppingCart();
     }
+
 }

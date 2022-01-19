@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import pro.sky.course2lesson11.service.ShoppingCartService;
 
-import java.util.List;
+import java.util.Map;
 
 @RestController
-@RequestMapping("/store/order")
+@RequestMapping("/order")
 public class ShoppingCartController {
 
     private ShoppingCartService shoppingCartService;
@@ -19,13 +19,11 @@ public class ShoppingCartController {
     }
 
     @GetMapping("/add")
-    public String add(@RequestParam int id) {
-        return ("В корзину покупок добавлен товар с id: "
-                + shoppingCartService.addProductId(id));
+    public String add(@RequestParam int id, @RequestParam int number) {
+        return shoppingCartService.addProductId(id, number);
     }
     @GetMapping("/get")
-    public List get() {
+    public Map<Integer, Integer> get() {
         return (shoppingCartService.getShoppingCart());
     }
-
 }
